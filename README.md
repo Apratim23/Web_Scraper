@@ -83,6 +83,3 @@ This project is licensed under the **MIT License**. See [LICENSE](LICENSE) for d
 ### Additional Notes
 - Ensure you comply with the terms of service of the websites you scrape.
 - This scraper is for educational purposes and should be used responsibly.
-
----
-Answer from Perplexity: pplx.ai/share
