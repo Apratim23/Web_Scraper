@@ -1,0 +1,92 @@
+body{ 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/bg.png');
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 600px;
+    margin: 20px auto;
+    padding:20px;
+    background-color: #cbf437;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+label{
+    font-weight: bold;
+}
+
+input[type="text"] {
+width: 100%;
+padding: 10px;
+font-size: 16px;
+border: 1px solid #ccc;
+box-sizing: border-box;
+}
+
+button[type="submit"]{
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #f46f40;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    cursor: pointer;
+}
+
+#webpageInfo{
+    margin-top: 20px;
+}
+
+.page_title p, .page_title h4, .heading p, .heading h4, .meta_description p, .meta_description h4{
+    display: none;
+}
+
+#webpageInfo.active h4{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#webpageInfo.active p{
+    display: block;
+    margin-bottom: 0;
+    padding-left: 10px;
+    background-color: aqua;
+    border-left: 5px solid #f46f40;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    padding: 8px;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌐 Webpage Information</title>
+    <link rel="icon" href="images/favicon.ico" type="image/ico">
+    <link rel="stylesheet" href="static\styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Webpage Information</h1>
+        <h4>A simple web scraping website that allows us to access the Website description that includes Page Title, heading and Meta Description</h4
+        <form id="urlForm">
+            <label for="urlInput">Enter URL:</label>
+            <input type="text" id="urlInput" name="url" placeholder="https://example.com" required>
+            <button type="submit">SUBMIT</button>
+        </form>
+        <div id="webpageInfo">
+            <div class="page_title">
+                <h4>Page Title</h4>
+                <p></p>
+            </div>
+            <div class="heading">
+                <h4>Heading:</h4>
+                <p></p>
+            </div>
+            <div class="meta_description">
+                <h4>Meta Description</h4>
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#urlForm').submit(function(e) {
+                e.preventDefault();
+                var url = $('#urlInput').val();
+                $.post('/',{url:url},function(data){
+                    let h1= data.h1;
+                    let meta=data.meta_description;
+                    let title=data.title;
+                    $('#webpageInfo').addClass('active');
+                    $('#webpageInfo .page_title p').text(title);
+                    $('#webpageInfo .meta_description p').text(meta);
+                    $('#webpageInfo .heading p').text(h1);
+                });
+                });
+            });
+    </script>
+</body>
+</html>
